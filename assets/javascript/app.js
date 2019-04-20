@@ -13,7 +13,7 @@ var wrong = 0;
 
 //variables for  questions, arrays for possible answers
 var firstQuestion = "Where was Frodo headed in the Lord of the Rings Trilogy?";
-var answersOne = ["White Castle","Mordor", "School", "Grfynndor"];
+var answersOne = ["White Castle","Mordor", "School", "Gryffindor"];
 
 var secondQuestion = "Who is known as the 'Half Blood Prince' ?";
 var answersTwo = ["Harry Potter", "Draco Malfoy", "Sirius Black", "Severus Snape"];
@@ -188,14 +188,18 @@ function start () {
 
     $("#game_portal").empty();
 
-    var gameover = $("<p>").text("Trivia Game is Over");
+    var gameover = $("<p>").css({'font-size': '20px'}).text("Trivia Game is Over");
     $("#game_portal").append(gameover);
 
-    var correctAnswers = $("<p>").text("Correct: " + correct);
+    var correctAnswers = $("<p>").css({'font-size': '20px'}).text("Correct: " + correct);
     $("#game_portal").append(correctAnswers);
 
-    var wrongAnswers = $("<p>").text("Wrong: " + wrong);
+    var wrongAnswers = $("<p>").css({'font-size': '20px'}).text("Wrong: " + wrong);
     $("#game_portal").append(wrongAnswers);
+
+    var noAnswer = $("<p>").text("Will Display the undefined number for questions not answered")
+    $("#game_portal").append(noAnswer);
+
 });
 
 
