@@ -7,7 +7,7 @@ body {
 
 .container {
     width: 800px;
-    height: 500px;
+    /* height: 500px; */
     margin: 100px auto;
     background-color: cornflowerblue;
     opacity: 0.5;
@@ -21,15 +21,17 @@ body {
 }
 
 #game_portal {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
+    text-align: center;
 }
+
 
 #start_game {
     padding: 10px;
     font-size: xx-large;
+}
+
+.questionset {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
