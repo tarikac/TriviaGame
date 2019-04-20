@@ -44,7 +44,7 @@ function start () {
     $("#timer").text(time);
     var count = setInterval(timer, 1000);
 
-    function timer () {
+    function timer () {3
     
         if (time <= -1)
         {
@@ -64,37 +64,40 @@ function start () {
    //$("#timer").text(time);
    
    //addes the question to html and creates the radio button to store each possible answer
+   //trying to style just the radio buttons
     $("#questionOne").text(firstQuestion);
     for(i=0; i < answersOne.length; i++) {
-        $("#answersOne").append("<input type='radio' name='firstquestion' value='" + answersOne[i] + "'>" + answersOne[i]);     
+        $("#answersOne").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='firstquestion' value='" + answersOne[i] + "'>" + answersOne[i]);     
+        
     }
-
+    //$("<input type='radio'>").css({'background-color': 'white'})
+        
     $("#questionTwo").text(secondQuestion);
     for(i=0; i < answersTwo.length; i++) {
-        $("#answersTwo").append("<input type='radio' name='secondquestion' value='" + answersTwo[i] + "'>" + answersTwo[i]);
+        $("#answersTwo").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input class='radioStyle' type='radio' name='secondquestion' value='" + answersTwo[i] + "'>" + answersTwo[i]);
     }
     $("#questionThree").text(thirdQuestion);
     for(i=0; i < answersThree.length; i++) {
-        $("#answersThree").append("<input type='radio' name='thirdquestion' value='" + answersThree[i] + "'>" + answersThree[i]);
+        $("#answersThree").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='thirdquestion' value='" + answersThree[i] + "'>" + answersThree[i]);
     }
     $("#questionFour").text(fourthQuestion);
     for(i=0; i < answersFourth.length; i++) {
-        $("#answersFourth").append("<input type='radio' name='fourthquestion' value='" + answersFourth[i] + "'>" + answersFourth[i]);
+        $("#answersFourth").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='fourthquestion' value='" + answersFourth[i] + "'>" + answersFourth[i]);
     }
 
     $("#questionFive").text(fifthQuestion);
     for(i=0; i < answersFifth.length; i++) {
-        $("#answersFifth").append("<input type='radio' name='fifthquestion' value='" + answersFifth[i] + "'>" + answersFifth[i]);
+        $("#answersFifth").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='fifthquestion' value='" + answersFifth[i] + "'>" + answersFifth[i]);
     }
 
     $("#questionSix").text(sixthQuestion);
     for(i=0; i < answersSixth.length; i++) {
-        $("#answersSixth").append("<input type='radio' name='sixthquestion' value='" + answersSixth[i] + "'>" + answersSixth[i]);
+        $("#answersSixth").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='sixthquestion' value='" + answersSixth[i] + "'>" + answersSixth[i]);
     }
 
     $("#questionSeven").text(seventhQuestion);
     for(i=0; i < answersSeventh.length; i++) {
-        $("#answersSeventh").append("<input type='radio' name='seventhquestion' value='" + answersSeventh[i] + "'>" + answersSeventh[i]);
+        $("#answersSeventh").css({'font-size': '16px', 'padding': '10px 20px'}).append("<input type='radio' name='seventhquestion' value='" + answersSeventh[i] + "'>" + answersSeventh[i]);
         
     }
     
@@ -104,6 +107,7 @@ function start () {
     $("#game_portal").append(submitButton);
 
     //grab the value of the radio button that is checked. console.log to make sure I am getting the right value
+    //actual instructions is just a timer and not including a submit button. Will have to rework
     $(submitButton).on("click", function(){
     var firstQuestionAnswer = $("input[name=firstquestion]:checked").val();
     console.log(firstQuestionAnswer);
