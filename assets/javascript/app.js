@@ -9,6 +9,7 @@ window.onload = function () {
 var time = 20;
 var correct = 0;
 var wrong = 0;
+var unanswered = 0;
 //questions
 
 //variables for  questions, arrays for possible answers
@@ -27,8 +28,8 @@ var answersFourth = ["Darth Vader", "Obi-wan Kenobi", "Luke", "Chewbacca"];
 var fifthQuestion = "Which actor plays Thor?";
 var answersFifth = ["Chris Evans", "Chris Pine", "Chris Hemsworth", "Chris Pratt"];
 
-var sixthQuestion = "Which actor plays Captain Kirk?";
-var answersSixth = ["Chris Hemsworth", "Chris Evans", "Chris Pratt", "Chris Pine"];
+var sixthQuestion = "Which actor plays Captain Kirk in the 2016 Movie Release";
+var answersSixth = ["William Shatner", "Chris Evans", "Chris Pratt", "Chris Pine"];
 
 var seventhQuestion = "Which actor played The Human Torch in Fantastic Four, Year 2007";
 var answersSeventh = ["Michael B Jordan", "Chris Evans", "Chris Pratt", "Miles Teller"];
@@ -134,13 +135,20 @@ function start () {
     if (firstQuestionAnswer == "Mordor") {
         correct ++;
     }
-    else {
-        wrong ++;
-    }
+    else if (!$("input[name=firstquestion]:checked").val()) {
+        unanswered ++;
+     }
+     else {
+         wrong ++;
+     }
     
+  
     if (secondQuestionAnswer == "Severus Snape"){
         correct ++;
     }
+    else if (!$("input[name=secondquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -149,6 +157,9 @@ function start () {
     if (thirdQuestionAnswer == "TARDIS") {
         correct ++;
     }
+    else if (!$("input[name=thirdquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -156,6 +167,9 @@ function start () {
     if (fourthQuestionAnswer == "Darth Vader") {
         correct ++;
     }
+    else if (!$("input[name=fourthquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -163,6 +177,9 @@ function start () {
     if (fifthQuestionAnswer == "Chris Hemsworth") {
         correct ++;
     }
+    else if (!$("input[name=fifthquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -170,6 +187,9 @@ function start () {
     if (sixthQuestionAnswer == "Chris Pine") {
         correct ++;
     }
+    else if (!$("input[name=sixthquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -177,6 +197,9 @@ function start () {
     if (seventhQuestionAnswer == "Chris Evans") {
         correct ++;
     }
+    else if (!$("input[name=seventhquestion]:checked").val()) {
+        unanswered ++;
+     }
     else {
         wrong ++;
     }
@@ -197,7 +220,7 @@ function start () {
     var wrongAnswers = $("<p>").css({'font-size': '20px'}).text("Wrong: " + wrong);
     $("#game_portal").append(wrongAnswers);
 
-    var noAnswer = $("<p>").text("Will Display the undefined number for questions not answered")
+    var noAnswer = $("<p>").css({'font-size': '20px'}).text("Unanswered: " + unanswered);
     $("#game_portal").append(noAnswer);
 
 });
