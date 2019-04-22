@@ -1,3 +1,5 @@
+//I added my timer last minute as I forgot about it
+// I included a "submit" button from my original testing. kept it there to submit results
 
 //loads whenthe page loads
 window.onload = function () {
@@ -10,7 +12,7 @@ var time = 20;
 var correct = 0;
 var wrong = 0;
 var unanswered = 0;
-//questions
+
 
 //variables for  questions, arrays for possible answers
 var firstQuestion = "Where was Frodo headed in the Lord of the Rings Trilogy?";
@@ -36,9 +38,7 @@ var answersSeventh = ["Michael B Jordan", "Chris Evans", "Chris Pratt", "Miles T
 
 
 
-
-
-
+//need to fix functions to hold sections of my code
 
 //start game...this is after pressing start button
 function start () {
