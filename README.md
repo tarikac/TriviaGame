@@ -4,7 +4,7 @@ Welcome to the Totally Science Fiction and Fantasy Trivia Game
 
 Assignnment Task:
 - Create a game with a list of questions. Users have to figure out the correct answers by pressing a button under each question.
-- After time is up or the game is submitte, next page will reveal the final score of the user.
+- After time is up or the game is submitted, the next page will reveal the final score of the user.
 - Score includes number Correct, number Wrong, number of quesitons unanswered if you did not get a chance to select an answer.
 
 Timer:
